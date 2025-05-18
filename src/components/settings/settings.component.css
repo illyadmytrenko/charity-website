@@ -1,0 +1,67 @@
+@import url('../../app/app.component.css');
+@import url(../../heading.css);
+@import url(../donationsHistory/donationsHistory.component.css);
+@import url(../modal-register/modal-register.component.css);
+
+
+.settings {
+}
+
+.settings_body {
+}
+
+.settings_main {
+}
+
+.settings_info {
+}
+
+.settings-block {
+   background-color: #9f9ea0;
+}
+
+.settings_heading {
+}
+
+.settings_text {
+}
+
+.settings_zero {
+}
+
+.settings_zero-heading {
+}
+
+.settings_personal,
+.settings_password {
+   display: block;
+}
+
+.personal_body,
+.password_body {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: 30px;
+}
+
+.block:not(:last-child) {
+   margin-bottom: 40px;
+}
+
+button {
+   margin-bottom: 0;
+}
+
+button:active {
+   position: relative;
+   top: 5px;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+   .personal_body
+   .password_body {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}

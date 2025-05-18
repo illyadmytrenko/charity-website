@@ -1,0 +1,171 @@
+@import url(../../heading.css);
+@import '../../../node_modules/swiper/modules/navigation.css';
+
+.review {
+   background: #EEEAFC;
+}
+
+.review_body {
+   padding: 80px 0;
+   position: relative;
+}
+
+.review_heading {
+   color: #FFF;
+   font-family: "Playfair Display";
+   font-size: 56px;
+   font-weight: 600;
+   line-height: 107.142857%; /* 60/56 */
+   background: no-repeat url('../../assets/Title.png');
+   display: flex;
+   flex: 1 0 35.972222%; /* 518/1440 */
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   height: 72%;
+   width: 35%;
+   z-index: 10;
+   bottom: 14;
+}
+
+.review_heading p {
+   max-width: 320px;
+   padding: 0 20px;
+}
+
+.review_info {
+   padding-left: 37.972222%;
+}
+
+.review_image {
+}
+
+.review_text {
+   margin-top: 40px;
+   max-width: 700px;
+}
+
+.review_author {
+   margin-top: 55px;
+   color: #2A2A2A;
+   font-family: "Playfair Display";
+   font-size: 32px;
+   font-weight: 500;
+   line-height: 125%; /* 40/32 */
+}
+
+.review_author p {
+   font-family: Montserrat;
+   font-size: 18px;
+   line-height: 155.555556%; /* 28px/18 */
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+   .review_text {
+      max-width: none;
+      padding-right: 150px;
+   }
+}
+
+@media only screen and (max-width: 992px) {
+   .review_body {
+      padding: 50px 0;
+   }
+
+   .review_heading {
+      height: 81%;
+      bottom: 10.5%;
+   }
+
+   .review_text {
+      padding-right: 70px;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .review_body {
+      position: static;
+   }
+
+   .review_heading {
+      position: static;
+      height: 200px;
+      width: 100%;
+      background-image: url('../../assets/Title.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+
+   .review_heading p {
+      position: static;
+      max-width: none;
+   }
+   
+   .review_info {
+      padding-left: 50px;
+      margin-top: 40px;
+   }
+
+   .review_text {
+      padding-right: 50px;
+      margin-top: 15px;
+   }
+
+   .review_author {
+      margin-top: 20px;
+   }
+}
+
+@media only screen and (max-width: 650px) {
+   .about_request {
+      margin-top: 30px;
+   }
+
+   .about_donate {
+      margin-top: 30px;
+   }
+
+   .event_right {
+      margin-top: 30px;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   .review_body {
+      padding: 40px 0;
+   }
+
+   .review_info {
+      padding-left: 40px;
+   }
+
+   .review_text {
+      padding-right: 40px;
+   }
+}
+
+@media only screen and (max-width: 450px) {
+   .review_info {
+      padding-left: 30px;
+   }
+
+   .review_text {
+      padding-right: 30px;
+   }
+}
+
+@media only screen and (max-width: 390px) {
+   .review_info {
+      padding-left: 20px;
+   }
+
+   .review_heading {
+      font-size: 48px;
+   }
+
+   .review_text {
+      padding-right: 20px;
+   }
+}

@@ -1,0 +1,20 @@
+<nav class="nav">
+   <h3 class="nav_heading">Navigation</h3>
+   <ul class="nav_list">
+      <li class="nav_item">
+         <a id="donationsHistory" (click)="setActiveLink('donationsHistory'); goToOtherPage('/donationsHistory')">
+            <p class="nav-link text" [class.active]="activeLinkService.getActiveLinkId() === 'donationsHistory'">My Donations</p>
+         </a>
+      </li>
+      <li class="nav_item">
+         <a id="settings" (click)="setActiveLink('settings'); goToOtherPage('/settings')">
+            <p class="nav-link text" [class.active]="activeLinkService.getActiveLinkId() === 'settings'">My Settings</p>
+         </a>
+      </li>
+      <li class="nav_item">
+         <a (click)="logOut()">
+            <p class="nav-link text">Log Out</p>
+         </a>
+      </li>
+   </ul>
+</nav>

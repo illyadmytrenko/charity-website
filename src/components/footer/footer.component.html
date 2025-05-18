@@ -1,0 +1,76 @@
+<footer>
+   <div class="body">
+      <div class="about">
+         <figure class="logo">
+            <img src="../../assets/mdi_charity2.svg" alt="charity logo">
+            <figcaption>Angels of Compassion</figcaption>
+         </figure>
+         <p class="text">Lorem Ipsum is simply dummy text of the industry's since the unknown. Lorem Ipsum is simply dummy text of the industry.</p>
+      </div>
+      <div class="gallery">
+         <h6 class="heading">Gallery</h6>
+         <gallery [galleryData]="data" [showCount]="true"></gallery>
+      </div>
+      <div class="links">
+         <h6 class="heading">Quick Link</h6>
+         <nav>
+            <ul>
+               <li>
+                  <a (click)="setActiveLink('home'); goToOtherPage('/home')"><p class="link-text">Home</p></a></li>
+               <li>
+                  <a (click)="setActiveLink('about'); goToOtherPage('/about')"><p class="link-text">About</p></a>
+               </li>
+               <li>
+                  <a (click)="setActiveLink('causes'); goToOtherPage('/causes')"><p class="link-text">Causes</p></a>
+               </li>
+               <li>
+                  <a (click)="setActiveLink('contact'); goToOtherPage('/contact')"><p class="link-text">Contact Us</p></a>
+               </li>
+               <li>
+                  <a (click)="setActiveLink('contact'); goToOtherPage('/becomeVolunteer')"><p class="link-text">Become Volunteer</p></a>
+               </li>
+               <li>
+                  <a (click)="goToOtherPage('/FAQ')"><p class="link-text">FAQ’s</p></a>
+               </li>
+               <li id="donationHistory-footer" class="d-none"> 
+                  <a (click)="setActiveLink('donationsHistory'); goToOtherPage('/donationsHistory')"><p class="link-text">Donation History</p></a>
+               </li>
+               <li id="settings-footer" class="d-none">
+                  <a (click)="setActiveLink('settings'); goToOtherPage('/settings')"><p class="link-text">Settings</p></a>
+               </li>
+               <li id="login-footer" (click)="openModalLogin()"> 
+                  <a><p class="link-text">Log in</p></a>
+               </li>
+               <li id="register-footer" (click)="openModalRegister()">
+                  <a><p class="link-text">Sign up</p></a>
+               </li>
+            </ul>
+         </nav>
+      </div>
+   </div>
+   <div class="copyright">
+      <p class="rights">© All right reserved 2023 <span>Angels of Compassion</span></p>
+      <div class="social-links">
+         <a href="#" class="social-image">
+            <div>
+               <img src="../../assets/copyright1.svg" alt="facebook icon">
+            </div>
+         </a>
+         <a href="#" class="social-image">
+            <div>
+               <img src="../../assets/copyright2.svg" alt="instagram icon">
+            </div>
+         </a>
+         <a href="#" class="social-image">
+            <div>
+               <img src="../../assets/copyright3.svg" alt="linkedin icon">
+            </div>
+         </a>
+         <a href="#" class="social-image">
+            <div>
+               <img src="../../assets/copyright4.svg" alt="twitter icon">
+            </div>
+         </a>
+      </div>
+   </div>
+</footer>

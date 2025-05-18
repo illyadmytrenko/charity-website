@@ -1,0 +1,136 @@
+:host {
+   display: block;
+   text-align: center;
+}
+
+.gallery-lightbox-container {
+   position: relative;
+   display: inline-block;
+   z-index: 20;
+}
+
+.gallery {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+   justify-content: center;
+}
+
+.gallery-img img {
+   width: 110px;
+   height: 110px;
+   object-fit: contain;
+   cursor: zoom-in;
+   border-radius: .35rem;
+}
+
+.lightbox {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.85);
+   z-index: 20;
+}
+
+.count {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 7%;
+   height: 10%;
+   color: #fff;
+   opacity: 0.7;
+   font-size: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 5px;
+}
+
+.close-btn {
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0;
+   color: #fff;
+   background: 0 0;
+   border: 0;
+   cursor: pointer;
+   width: 7%;
+   height: 10%;
+   z-index: 2;
+}
+
+.fa-times {
+   font-size: 30px;
+}
+
+.btn-lightbox-carousel {
+   position: absolute; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+   width: 8%;
+   height: 8%;
+   padding: 0;
+   color: #fff;
+   background: 0 0;
+   text-align: center;
+   border: 0;
+   cursor: pointer;
+}
+
+.btn-prev {
+   left: 0;
+}
+
+.btn-next {
+   right: 0;
+}
+
+.icon-lightbox-carousel {
+   color: #fff;
+   opacity: 0.5;
+   transition: all 0.15s ease;
+}
+
+.icon-lightbox-carousel:hover {
+   opacity: 0.9;
+}
+
+.icon-lightbox-carousel:active {
+   opacity: 0.5;
+}
+
+.icon-prev,
+.icon-next {
+   font-size: 30px;
+}
+
+.lightbox-img img {
+   width: 100%;
+   height: 100%;
+   border-radius: 0.35rem;
+   position: relative;
+   z-index: 20;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+   .lightbox-img img {
+      width: 350px;
+   }
+}
+
+@media only screen and (max-width: 450px) {
+   .lightbox-img img {
+      width: 250px;
+   }
+}

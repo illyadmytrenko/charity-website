@@ -1,0 +1,363 @@
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+}
+
+.logo {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.logo img {
+   width: 40px;
+   height: 100%;
+}
+
+.logo_name {
+   font-family: "Playfair Display";
+   font-weight: 600;
+   color: #3A40D8;
+   font-size: 22px;
+   text-align: center;
+}
+
+ul {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 25px 0;
+}
+
+ul li:not(:last-child) {
+   padding-right: 40px;
+}
+
+li a,
+li {
+   font-family: Montserrat;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 155.555556%; /* 28/18 */
+   color: #5A5A5A;
+   transition: all 0.2s ease;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+}
+
+li a:hover,
+li:hover {
+   color: #757521;
+}
+
+.active {
+   color: #3A40D8;
+}
+
+.d-none {
+   display: none;
+}
+
+#button,
+#button-copy {
+   display: flex;
+   align-items: center;
+   padding: 15px 25px;
+   background-color: #3A40D8;
+   border-radius: 12px;
+   transition: all 0.8s ease 0.2s;
+}
+
+#button, #button-copy {
+   cursor: pointer;
+}
+
+#button:hover {
+   background-color: #289113;
+}
+
+#button:active {
+   position: relative;
+   top: 5px;
+}
+
+#button p,
+#button-copy p {
+   text-align: center;
+   font-family: Montserrat;
+   font-weight: 500;
+   line-height: 24/16;
+   color: #fff;
+}
+
+#button img,
+#button-copy img {
+   position: relative;
+   top: 1px;
+   left: 2px;
+}
+
+#button-copy {
+   display: none;
+}
+
+.hamburger {
+   left: 10%;
+   top: 20px;
+   width: 50px;
+   height: 6px;
+   background: #FCFCFC;
+   position: absolute;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+   transition: 0.5s;
+}
+
+.hamburger:before {
+   top: 20px;
+}
+
+.hamburger:after {
+   top: 40px;
+}
+
+.icon-one {
+   position: absolute;
+   top: 16px;
+   right: 40px;
+   width: 70px;
+   height: 50px;
+   cursor: pointer;
+   display: none;
+   z-index: 10;
+}
+
+.hamburger-one:before,
+.hamburger-one:after {
+   content: '';
+   position:absolute;
+   width: 50px;
+   height: 6px;
+   background:#FCFCFC;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   transition: 0.5s;
+}
+
+.icon-one.active-one .hamburger-one {
+   background:rgba(0,0,0,0);
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+   transition: 0s;
+}
+
+.icon-one.active-one .hamburger-one:before {
+   top: 15px;
+   transform:rotate(45deg);
+}
+
+.icon-one.active-one .hamburger-one:after {
+   top: 15px;
+   transform:rotate(135deg);
+   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------------------------- */
+
+.dropdown-container {
+   position: relative;
+   height: 40px;
+}
+
+.link {
+   text-decoration: none;
+   display: flex;
+}
+
+.link img {
+   transform: rotate(90deg);
+   margin-left: 5px;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #289113;
+   min-width: 160px;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   z-index: 100;
+   top: 40px;
+   border-radius: 10px;
+   padding: 10px;
+   transition: all 0.5s ease 0s;
+}
+
+.dropdown-content ul {
+   padding: 0 !important;
+   display: flex;
+   flex-direction: column;
+}
+
+.dropdown-content li {
+   padding: 0 !important;
+   cursor: pointer;
+   color: #fff;
+}
+
+.dropdown-content li:not(:last-child) {
+   margin-bottom: 10px;
+}
+
+.dropdown-container:hover .dropdown-content {
+   display: block;
+}
+
+.dropdown-container:hover .link img {
+   transform: rotate(-90deg);
+}
+
+/* --------------------------------------------------- */
+
+.nav_item:not(:last-child) {
+   margin-bottom: 10px;
+}
+
+.nav-link {
+   color: #fff;
+   transition: all 0.4s ease 0s;
+   position: relative;
+   display: inline;
+   cursor: pointer;
+}
+
+.nav-link:hover {
+   padding-left: 25px;
+   font-weight: 600;
+}
+
+.nav-link:hover::before {
+   position: absolute;
+   content: "\27A1";
+   left: 0;
+}
+
+.activeNav {
+   font-weight: 600;
+   padding-left: 25px;
+   position: relative;
+}
+
+.activeNav::before {
+   position: absolute;
+   content: "\27A1";
+   left: 0;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+   #button {
+      display: none;
+   }
+
+   ul {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      position: absolute;
+      z-index: 5;
+   }
+
+   ul li {
+      padding: 15px 0 !important;
+   }
+
+   .left-one {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      gap: 0;
+      padding: 0;
+   }
+
+   .left-one a {
+      color: white;
+      text-decoration: none;
+   }
+
+   .left-one #button-copy {
+      display: flex;
+   }
+
+   .left-one a:hover {
+      background-color: #555;
+   }
+   
+   @keyframes slideIn {
+      to {
+         left: 0;
+      }
+   }
+   
+   @keyframes slideOut {
+      from {
+         left: 0;
+      }
+      to {
+         left: -100%;
+      }
+   }
+   
+   .show {
+      animation: slideIn 1.3s ease forwards;
+   }
+   
+   .hide {
+      animation: slideOut 1.3s ease forwards;
+   }
+
+   .icon-one {
+      display: flex;
+      order: 3;
+   }
+
+   .fixed {
+      position: fixed;
+   }
+
+   header {
+      padding: 10px 0;
+   }
+
+   .dropdown-container {
+      position: relative;
+   }
+
+   .dropdown-content {
+      position: absolute;
+      min-height: 160px;
+      min-width: 170px;
+   }
+}
+
+@media only screen and (max-width: 450px) {
+   .logo {
+      max-width: 150px;
+   }
+
+   .hamburger {
+      top: 25px;
+   }
+   
+   #button-copy {
+      display: block;
+   }
+
+   .icon-one {
+      right: 20px;
+   }
+}

@@ -1,0 +1,171 @@
+<section class="hero">
+   <div class="container">
+      <div class="hero_body">
+         <div class="hero_info">
+            <h1 class="hero_heading">We Need Your Powerful Hands To <span class="blue">Change</span> The World.</h1>
+            <div class="hero_buttons">
+               <a class="hero_causes btn blue-btn" (click)="setActiveLink('causes'); goToOtherPage('/causes')">
+                  <p>All Causes</p>
+                  <img src="../../../assets/angle-right.svg" alt="angle-right">
+               </a>
+               <a class="hero_donate btn transparent-btn" (click)="handleDonateClick()">
+                  <p>Donate Now</p>
+                  <img src="../../../assets/angle-right-blue.svg" alt="angle-right-blue">
+               </a>
+            </div>
+         </div>
+         <div class="hero_image">
+            <img src="../assets/Hero Images.png" alt="little boy">
+         </div>
+      </div>
+   </div>
+</section>
+<section class="how-help">
+   <div class="container">
+      <div class="how-help_body">
+         <h3 class="how-help_heading">How Could You Help?</h3>
+         <div class="how-help_cards cards-help">
+            <div class="cards-help_card card-help">
+               <div class="card-help_image">
+                  <img src="../assets/help1.svg" alt="help icon 1">
+               </div>
+               <h6 class="card-help_heading">Become volunteer</h6>
+               <p class="card-help_text text">You can contribute your time, skills and knowledge through volunteering
+                  with the UN.</p>
+               <a class="card-help_more btn transparent-btn sm-pd" (click)="setActiveLink('about'); goToOtherPage('/about')">Read More</a>
+            </div>
+            <div class="cards-help_card card-help">
+               <div class="card-help_image">
+                  <img src="../assets/help2.svg" alt="help icon 2">
+               </div>
+               <h6 class="card-help_heading">Call for donation</h6>
+               <p class="card-help_text text">You can contribute your time, skills and knowledge through volunteering
+                  with the UN.</p>
+               <a class="card-help_more btn transparent-btn sm-pd" (click)="setActiveLink('about'); goToOtherPage('/about')">Read More</a>
+            </div>
+            <div class="cards-help_card card-help">
+               <div class="card-help_image">
+                  <img src="../assets/help3.svg" alt="help icon 3">
+               </div>
+               <h6 class="card-help_heading">Send donation</h6>
+               <p class="card-help_text text">You can contribute your time, skills and knowledge through volunteering
+                  with the UN.</p>
+               <a class="card-help_more btn transparent-btn sm-pd" (click)="setActiveLink('about'); goToOtherPage('/about')">Read More</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="about">
+   <div class="container">
+      <div class="about_body">
+         <div class="about_images">
+            <div class="about_image img1">
+               <img src="../assets/about1.png" alt="about us picture 1">
+            </div>
+            <div class="about_image img2">
+               <img src="../assets/about2.png" alt="about us picture 2">
+            </div>
+            <div class="about_image img3">
+               <img src="../assets/about3.png" alt="about us picture 3">
+            </div>
+         </div>
+         <div class="about_info">
+            <h3 class="about_heading">Givest is The Non Profitable Organization</h3>
+            <article class="about_text text">Lorem Ipsum is simply dummy text of the printing and typesetting industry
+               orem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry orem Ipsum has been the
+               industry's standard dummy text ever since the 1500s, when an unknown.Ipsum has been the industry's
+               standard dummy text ever since the 1500s, when an unknown.</article>
+            <div class="about_request">
+               <p class="about_need need1">Need your simple helpfor save children.</p>
+               <p class="about_need">Need your simple helpfor save children.</p>
+            </div>
+            <a class="about_donate btn blue-btn" (click)="handleDonateClick()">
+               <p>Donate Now</p>
+               <img src="../assets/angle-right.svg" alt="angle-right">
+            </a>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="donate">
+   <div class="container">
+      <div class="donate_body">
+         <h3 class="donate_heading">Donate For Poor People. Causes of Givest</h3>
+         <swiper-container [slidesPerView]="1" [loop]="true" [pagination]="{ clickable: true}" [lazy]="true" autoplay="true">
+            <swiper-slide class="donate_cards cards-donate">
+               <donation-card [data]="this.data[0]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.data[1]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.data[2]" class="cards-donate_card card-donate"></donation-card>
+            </swiper-slide>
+            <swiper-slide class="donate_cards cards-donate">
+               <donation-card [data]="this.data[3]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.data[4]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.data[5]" class="cards-donate_card card-donate"></donation-card>
+            </swiper-slide>
+            <swiper-slide class="donate_cards cards-donate">
+               <donation-card [data]="this.data[6]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.data[7]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.data[8]" class="cards-donate_card card-donate"></donation-card>
+            </swiper-slide>
+         </swiper-container>
+      </div>
+   </div>
+</section>
+<section class="donation">
+   <div class="container">
+      <div class="donation_body">
+         <div class="donation_images">
+            <div class="donation_image">
+               <img src="../assets/donation1.png" alt="kids picture1">
+            </div>
+            <div class="donation_image img-abs">
+               <img src="../assets/donation2.png" alt="kids picture2">
+            </div>
+         </div>
+         <div class="donation_info">
+            <h3 class="donation_heading">Need Pure Water For Mozam bique People.</h3>
+            <p class="donation_text text">Lorem Ipsum is simply dummy text of the printing and typesetting industry ore</p>
+            <div class="donation_buttons">
+               <a class="donation_donate btn transparent-btn md-pd" (click)="handleDonateClick(20, 'Need pure water for Mozambique people')">
+                  <p>$20</p>
+               </a>
+               <a class="donation_donate btn transparent-btn md-pd" (click)="handleDonateClick(50, 'Need pure water for Mozambique people')">
+                  <p>$50</p>
+               </a>
+               <a class="donation_donate btn transparent-btn md-pd" (click)="handleDonateClick(200, 'Need pure water for Mozambique people')">
+                  <p>$200</p>
+               </a>
+               <a class="donation_donate btn transparent-btn md-pd" (click)="handleDonateClick(undefined, 'Need pure water for Mozambique people')">
+                  <p>Custom</p>
+               </a>
+               <a class="donation_donate btn blue-btn" (click)="handleDonateClick(undefined, 'Need pure water for Mozambique people')">
+                  <p>Donate Now</p>
+                  <img src="../../../assets/angle-right.svg" alt="angle-right">
+               </a>
+            </div>
+            <p class="donation_donners donners">Great Donners</p>
+            <p class="donners_text text">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem.</p>
+            <div class="donation_donners-images images-donners">
+               <div class="images-donners_image">
+                  <img src="../assets/donners1.png" alt="donner1 picture">
+               </div>
+               <div class="images-donners_image">
+                  <img src="../assets/donners2.png" alt="donner2 picture">
+               </div>
+               <div class="images-donners_image">
+                  <img src="../assets/donners3.png" alt="donner3 picture">
+               </div>
+               <div class="images-donners_image blue-bg text">
+                  <img src="../assets/donners4.png" alt="donner4 picture">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<review></review>
+<div class="container">
+   <stats></stats>
+</div>

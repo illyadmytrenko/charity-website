@@ -1,0 +1,36 @@
+<roadmap [title]="title" [way]="way"></roadmap>
+<section class="donations-history">
+   <div class="container">
+      <div class="donations-history_body body">
+         <aside>
+            <navigation></navigation>
+         </aside>
+         <div class="donations-history_main main">
+            <div class="donations-history_info donations-history-block info block">
+               <h3 class="donations-history_heading heading">My Donations</h3>
+               <p class="donations-history_text text block_text">Here is your pride! Each of these positions is your pride, because your help is very important to us! Please do not forget that our Wards need more than just financial support. As many people as possible should learn about them - publish the selected meetings on social networks. This is very important to us, thank you!</p>
+            </div>
+            <div *ngIf="donations.donations.length === 0" class="donations-history_zero donations-history-block zero block" id="zero-donate">
+               <h4 class="donations-history_zero-heading zero-heading">You have not made any donation yet</h4>
+               <p class="donations-history_text text block_text">If you have not yet made a donation for our Wards - please think about it! For some people, an amount equal to the price of a cup of coffee in a restaurant is a significant help! We guarantee that such charity cup of coffee will improve your mood for sure!</p>
+               <a class="donations-history_button btn transparent-btn block_button" (click)="setActiveLink('causes'); goToOtherPage('/causes')">Make a donation <span>&#10145;</span></a>
+            </div>
+            <div *ngIf="donations.donations.length > 0" class="donations-history-block">
+               <ul class="donations-history_cards">
+                  <li *ngFor="let donation of donations.donations" class="donations-history_card">
+                     <div class="donations-history_card-image">
+                        <img [src]="donation.IMAGE_PATH" alt="">
+                     </div>
+                     <div class="donations-history_card-body">
+                        <h5 class="card-donate_heading">{{  donation.DONATION_TITLE }}</h5>
+                        <p class="card-donate_text text">Lorem Ipsum is simply dummy text of the industry's since the unknown.</p>
+                        <p class="card-donate_text text">Donation sum: {{ donation.AMOUNT }}$</p>
+                        <p class="card-donate_text text">Donation was made: {{ donation.DONATION_TIME}}</p>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

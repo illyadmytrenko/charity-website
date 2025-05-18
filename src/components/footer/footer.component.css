@@ -1,0 +1,192 @@
+footer {
+   background: #2A2A2A;
+   color: #FFFFFF;
+}
+
+.body {
+   display: flex;
+   justify-content: space-between;
+   padding: 80px 150px;
+}
+
+.body > div:not(:last-child) {
+   padding-right: 20px;
+}
+
+.about {
+   flex: 1 1 30%;
+   display: flex;
+   flex-direction: column;
+}
+
+.logo {
+   text-align: center;
+   align-self: start;
+   margin-bottom: 25px;
+}
+
+figcaption {
+   text-align: center;
+   font-family: "Playfair Display";
+   font-size: 22px;
+   font-weight: 600;
+}
+
+.text,
+.link-text{
+   font-family: Montserrat;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 155.555556%; /* 28px/18 */
+}
+
+.gallery {
+   flex: 1 1 35%;
+}
+
+.heading {
+   text-align: center;
+   font-family: Montserrat;
+   font-size: 24px;
+   font-weight: 500;
+   line-height: 133.333333%; /* 32/24 */
+   margin-bottom: 25px;
+}
+
+.links {
+   flex: 1 1 35%;
+}
+
+ul {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 15px;
+}
+
+li a {
+   transition: all 0.2s ease;
+   color: #FFFFFF;
+   cursor: pointer;
+}
+
+li a:hover {
+   color: #757521;
+}
+
+.link-text {
+   line-height: 222.222222%; /* 40/18 */
+   text-align: center;
+}
+
+.copyright {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 20px;
+   border-top: 2px solid hsl(0, 0%, 25%);
+   padding: 20px 150px;
+}
+
+.rights {
+   font-family: Montserrat;
+   font-size: 18px;
+   font-weight: 600;
+   line-height: 155.555556%; /* 28/18 */
+}
+
+.rights span {
+   color: #7967ED;
+}
+
+.social-links {
+   display: flex;
+}
+
+.social-image {
+}
+
+.social-image:not(:last-child) {
+   padding-right: 25px;
+}
+
+.active {
+   color: #3A40D8;
+}
+
+.d-none {
+   display: none;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+   .body {
+      padding: 80px 100px;
+   }
+
+   .copyright {
+      padding: 20px 100px;
+   }
+}
+
+@media only screen and (max-width: 992px) {
+   .body {
+      padding: 50px 100px;
+      flex-direction: column;
+   }
+   .body > div:not(:last-child) {
+      padding: 0 0 25px 0;
+   }
+   .heading {
+      text-align: left;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .body {
+      padding: 50px 50px;
+   }
+
+   .copyright {
+      padding: 20px 50px;
+   }
+
+   .heading {
+      text-align: center;
+   }
+
+   .logo {
+      align-self: center;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   .body {
+      padding: 40px 40px;
+   }
+
+   .copyright {
+      padding: 20px 40px;
+   }
+}
+
+@media only screen and (max-width: 450px) {
+   .body {
+      padding: 40px 30px;
+   }
+
+   .copyright {
+      padding: 20px 30px;
+   }
+}
+
+@media only screen and (max-width: 390px) {
+   .body {
+      padding: 40px 20px;
+   }
+
+   .copyright {
+      padding: 20px 20px;
+   }
+}

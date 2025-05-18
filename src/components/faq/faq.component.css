@@ -1,0 +1,103 @@
+@import url('../../app/app.component.css');
+@import url(../../heading.css);
+
+.faq {
+   padding: 80px 0;
+}
+
+.faq_body {
+   text-align: center;
+}
+
+.faq_heading {
+}
+
+.faq_subheading {
+   color: #5A5A5A;
+   font-size: 24px;
+}
+
+.faq_buttons {
+   margin-top: 35px;
+   font-family: Montserrat;
+}
+
+.faq_button {
+   background-color: transparent;
+   padding: 20px 40px;
+   transition: all 0.5s ease 0s;
+   border-radius: 10px;
+   font-size: 18px;
+   text-transform: uppercase;
+   font-weight: 600;
+}
+
+.faq_button:hover,
+.active {
+   background-color: #3A40D8;
+   color: #fff;
+}
+
+.faq_button:not(:last-child) {
+   margin-right: 30px;
+}
+
+.faq_questions {
+   margin-top: 30px;
+   text-align: left;
+   font-family: Montserrat;
+   display: none;
+}
+
+.faq_block {
+}
+
+.faq_block:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+.faq_question {
+   background-color: #3A40D8;
+   padding: 20px 40px;
+   color: #fff;
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+}
+
+.faq_question img {
+   transform: rotate(90deg);
+}
+
+.faq_question img.activeAngle {
+   transform: rotate(-90deg);
+}
+
+.faq_answer {
+   color: #5A5A5A;
+   padding: 20px 0 0 0;
+   display: none;
+}
+
+.faq_answer.activeAnswer,
+.faq_questions.activeAnswer {
+   display: block;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 992px) {
+   .faq_buttons {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .faq_button {
+      align-self: center;
+   }
+
+   .faq_button:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 25px;
+   }
+}

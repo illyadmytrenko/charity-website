@@ -1,0 +1,54 @@
+<roadmap [title]="title" [way]="way"></roadmap>
+<section class="form_section">
+   <div class="container">
+      <div class="form_body">
+         <h3 class="form_heading">Join With Us As A Volunteer</h3>
+         <h4 class="form_subheading">Personal Info</h4>
+         <form class="form" (submit)="onSubmit()">
+            <mat-form-field class="form_item">
+               <label for="firstName">First Name</label>
+               <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="formData.firstName">
+               <p id="become_firstname_error"></p>
+            </mat-form-field>
+            <mat-form-field class="form_item">
+               <label for="lastName">Last Name</label>
+               <input type="text" name="lastName" placeholder="Last Name" [(ngModel)]="formData.lastName">
+               <p id="become_lastname_error"></p>
+            </mat-form-field>
+            <mat-form-field class="form_item">
+               <label for="email">Email Address</label>
+               <input type="email" name="email" placeholder="Email Address" [(ngModel)]="formData.email">
+               <p id="become_email_error"></p>
+            </mat-form-field>
+            <mat-form-field class="form_item">
+               <label for="phoneNumber">Phone Number</label>
+               <input type="tel" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="formData.phoneNumber">
+               <p id="become_phone_error"></p>
+            </mat-form-field>
+            <mat-form-field class="form_item">
+               <label for="age">Age</label>
+               <input type="number" name="age" placeholder="Age" min="0" max="100" [(ngModel)]="formData.age">
+               <p id="become_age_error"></p>
+            </mat-form-field>
+            <mat-form-field class="form_item">
+               <label for="region">Region</label>
+               <input type="text" name="region" placeholder="Region" [(ngModel)]="formData.region">
+               <p id="become_region_error"></p>
+            </mat-form-field>
+            <mat-form-field class="form_item-100">
+               <label for="message">Message</label>
+               <textarea name="message" name="message" cols="auto" rows="10" placeholder="Enter your message..." [(ngModel)]="formData.message"></textarea>
+               <p id="become_message_error"></p>
+            </mat-form-field>
+            <button class="blue-btn-border btn">
+               <p>Submit</p>
+               <img src="../../assets/angle-right.svg" alt="angle-right">
+            </button>
+         </form>
+      </div>
+   </div>
+</section>
+<div class="container">
+   <stats></stats>
+</div>
+<review></review>

@@ -1,0 +1,187 @@
+@import url('../../app/app.component.css');
+@import url(../../heading.css);
+
+.about {
+   padding: 80px 0;
+}
+
+.about_heading {
+   color: #2A2A2A;
+   font-family: "Playfair Display";
+   font-size: 54px;
+   font-weight: 600;
+   line-height: 120%;
+   max-width: 720px;
+}
+
+.about_body {
+   margin-top: 35px;
+   display: flex;
+   align-items: center;
+}
+
+.about_image {
+   flex: 0 1 40%;
+}
+
+.about_image {
+   padding-right: 25px;
+}
+
+.about_image img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+.about_right {
+   flex: 1 1 60%;
+}
+
+.about_subheading {
+   font-size: 36px;
+}
+
+.about_text {
+   margin-top: 30px;
+}
+
+.about_cards {
+   margin-top: 40px;
+   display: flex;
+}
+
+.about_card {
+}
+
+.card-about {
+   padding: 20px;
+   position: relative;
+   overflow: hidden;
+}
+
+.card-about::before {
+   content: "";
+   position: absolute;
+   width: 261px;
+   left: -30px;
+   top: -70px;
+   height: 261px;
+   flex-shrink: 0;
+   border-radius: 261px;
+   border: 1px solid #fff;
+   opacity: 0.4;
+}
+
+.card-about:not(:last-child) {
+   margin-right: 30px;
+}
+
+.card-about_heading {
+   padding-left: 15px;
+   margin-top: 20px;
+   color: #fff;
+   position: relative;
+   display: block;
+}
+
+.card-about_heading::before {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   left: 0;
+   top: -10px;
+   border-radius: 50%;
+   background-color: rgba(255, 255, 255, 0.2);
+   z-index: 5;
+}
+
+.card-about_text {
+   margin-top: 20px;
+   color: #fff;
+   word-spacing: 20px !important;
+}
+
+/* --------------------------------------------------- */
+
+.volunteer {
+   padding: 80px 0;
+}
+.volunteers_heading {
+   text-align: center;
+}
+.volunteer_images {
+   display: flex;
+   margin-top: 30px;
+   padding-bottom: 35px;
+}
+.volunteer_image {
+   flex: 1 1 auto;
+}
+
+img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+.volunteer_image:not(:last-child) {
+   padding-right: 20px;
+}
+
+/* --------------------------------------------------- */
+
+.pink-card {
+   background-color: #f78484;
+}
+
+.orange-card {
+   background-color: #eeb738;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+   .about_body {
+      flex-direction: column-reverse;
+   }
+
+   .about_image {
+      padding: 0;
+      margin-top: 25px;
+   }
+}
+
+@media only screen and (max-width: 992px) {
+   .about,
+   .volunteer {
+      padding: 50px 0;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .about_cards {
+      flex-direction: column;
+   }
+
+   .card-about:not(:last-child) {
+      margin: 0 0 25px 0;
+   }
+
+   .volunteer_images {
+      flex-direction: column;
+   }
+
+   .volunteer_image:not(:last-child) {
+      padding-right: 0;
+      padding-bottom: 30px;
+   }
+} 
+
+@media only screen and (max-width: 500px) {
+   .about,
+   .volunteer {
+      padding: 40px 0;
+   }
+}

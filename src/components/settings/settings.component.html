@@ -1,0 +1,70 @@
+<roadmap [title]="title" [way]="way"></roadmap>
+<section class="settings">
+   <div class="container">
+      <div class="settings_body body">
+         <aside>
+            <navigation></navigation>
+         </aside>
+         <div class="settings main">
+            <div class="settings_info settings-block info block">
+               <h3 class="settings heading ">My Settings</h3>
+               <p class="settings text block_text">Below you can see the account settings. You can fill in your personal data. It is not necessary for users of our portal, however, if, for example, you need some document from our page or if we have any questions regarding your applications, having your personal data will help us a lot. You can also change your password.</p>
+            </div>
+            <form class="settings_personal personal settings-block block" (ngSubmit)="onSubmitPersonal()">
+               <h4 class="personal_zero-heading zero_heading">Personal Information</h4>
+               <div class="personal_body">
+                  <mat-form-field>
+                     <input matInput placeholder="Full Name" name="fullName" [(ngModel)]="formDataPersonal.fullName">
+                  </mat-form-field>
+                  <mat-form-field>
+                     <input matInput type="tel" placeholder="Phone number" name="confirmOldPassword" [(ngModel)]="formDataPersonal.phoneNum">
+                  </mat-form-field>
+                  <mat-form-field>
+                     <input matInput placeholder="Country" name="country" [(ngModel)]="formDataPersonal.country">
+                  </mat-form-field>
+                  <mat-form-field>
+                     <input matInput placeholder="City" name="city" [(ngModel)]="formDataPersonal.city">
+                  </mat-form-field>
+                  <mat-form-field>
+                     <input matInput placeholder="Post index" name="postIndex" [(ngModel)]="formDataPersonal.postIndex">
+                  </mat-form-field>
+                  <mat-form-field>
+                     <input matInput placeholder="Street" name="street" [(ngModel)]="formDataPersonal.street">
+                  </mat-form-field>
+               </div>
+               <button mat-raised-button color="primary" type="submit">Save information</button>
+            </form>
+            <form class="settings_password password settings-block block" (ngSubmit)="onSubmitPassword()">
+               <h4 class="password_heading zero_heading">Change your password</h4>
+               <div class="password_body">
+                  <div>
+                     <mat-form-field>
+                        <input matInput type="password" placeholder="Your current password" name="oldPassword" [(ngModel)]="formDataPassword.oldPassword">
+                     </mat-form-field>
+                     <p id="oldPassword_error"></p>
+                  </div>
+                  <div>
+                     <mat-form-field>
+                        <input matInput type="password" placeholder="Repeat your current password" name="confirmOldPassword" [(ngModel)]="formDataPassword.confirmOldPassword">
+                     </mat-form-field>
+                     <p id="confirmOldPassword_error"></p>
+                  </div>
+                  <div>
+                     <mat-form-field>
+                        <input matInput type="password" placeholder="Your new password" name="newPassword" [(ngModel)]="formDataPassword.newPassword">
+                     </mat-form-field>
+                     <p id="newPassword_error"></p>
+                  </div>
+                  <div>
+                     <mat-form-field>
+                        <input matInput type="password" placeholder="Repeat your new password" name="confirmNewPassword" [(ngModel)]="formDataPassword.confirmNewPassword">
+                     </mat-form-field>
+                     <p id="confirmNewPassword_error"></p>
+                  </div>
+               </div>
+               <button mat-raised-button color="primary" type="submit">Change password</button>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>

@@ -1,0 +1,12 @@
+<h1>Log in to an existing account</h1>
+<form (ngSubmit)="onSubmit()">
+   <mat-form-field>
+      <input matInput placeholder="Your email" name="email" id="username" [(ngModel)]="formData.email">
+   </mat-form-field>
+   <p id="email_error"></p>
+   <mat-form-field>
+      <input matInput type="password" placeholder="Your password" name="password" [(ngModel)]="formData.password">
+   </mat-form-field>
+   <p id="password_error"></p>
+   <button mat-raised-button color="primary" type="submit">Log in</button>
+</form>

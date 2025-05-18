@@ -1,0 +1,30 @@
+<roadmap [title]="title" [way]="way"></roadmap>
+<section class="donate">
+   <div class="container">
+      <div class="donate_body">
+         <h3 class="donate_heading">Donate For Poor People. Causes of Givest</h3>
+         <div>
+            <div class="donate_cards cards-donate">
+               <donation-card [data]="this.displayedData[0]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.displayedData[1]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.displayedData[2]" class="cards-donate_card card-donate"></donation-card>
+            </div>
+            <div class="donate_cards cards-donate">
+               <donation-card [data]="this.displayedData[3]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.displayedData[4]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.displayedData[5]" class="cards-donate_card card-donate"></donation-card>
+            </div>
+            <div class="donate_cards cards-donate">
+               <donation-card [data]="this.displayedData[6]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.displayedData[7]" class="cards-donate_card card-donate"></donation-card>
+               <donation-card [data]="this.displayedData[8]" class="cards-donate_card card-donate"></donation-card>
+            </div>
+         </div>
+         <pagination [currentPage]="currentPage" [totalPages]="totalPages" (pageChange)="onPageChange($event)"></pagination>
+      </div>
+   </div>
+</section>
+<div class="container">
+   <stats></stats>
+</div>
+<review></review>

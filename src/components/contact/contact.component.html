@@ -1,0 +1,41 @@
+<roadmap [title]="title" [way]="way"></roadmap>
+<section class="contact">
+   <div class="container">
+      <div class="contact_body">
+         <form class="contact_form" (submit)="onSubmit()">
+            <mat-form-field>
+               <label for="firstName">First Name</label>
+               <input class="contact_input" placeholder="First Name" name="firstName" [(ngModel)]="formData.firstName">
+            </mat-form-field>
+            <p id="contact_firstname_error"></p>
+            <mat-form-field>
+               <label for="lastName">Last Name</label>
+               <input class="contact_input" placeholder="Last Name" name="lastName" [(ngModel)]="formData.lastName">
+            </mat-form-field>
+            <p id="contact_lastname_error"></p>
+            <mat-form-field>
+               <label for="email">Email Address</label>
+               <input class="contact_input" placeholder="Email Address" name="email" [(ngModel)]="formData.email">
+            </mat-form-field>
+            <p id="contact_email_error"></p>
+            <mat-form-field>
+               <label for="phoneNumber">Phone Number</label>
+               <input class="contact_input" placeholder="Phone Number" name="phoneNumber" [(ngModel)]="formData.phoneNumber">
+            </mat-form-field>
+            <p id="contact_phone_error"></p>
+            <mat-form-field>
+               <label for="phoneNumber">Message</label>
+               <textarea class="contact_input" placeholder="Message..." name="message" cols="30" rows="10" [(ngModel)]="formData.message"></textarea>
+            </mat-form-field>
+            <p id="contact_message_error"></p>
+            <button mat-raised-button color="primary" type="submit">
+               <span>Submit</span>
+               <img src="../../assets/angle-right.svg" alt="angle-right">
+            </button>
+         </form>
+         <div class="contact_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4937.864705292662!2d-73.98565060580772!3d40.759707057821636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2z0KLQsNC50LzRgSDRgdC60LLQtdGA!5e0!3m2!1sru!2sua!4v1713859168700!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+      </div>
+   </div>
+</section>

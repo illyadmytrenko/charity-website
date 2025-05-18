@@ -1,0 +1,171 @@
+@import url('../../app/app.component.css');
+@import url(../../heading.css);
+
+.form_section {
+   padding: 80px 0;
+}
+
+.form_body {
+   padding: 50px 80px;
+   background-color: #464cf4;
+   position: relative;
+   overflow: hidden;
+}
+
+.form_body::before {
+   content: "";
+   position: absolute;
+   width: 461px;
+   left: -90px;
+   top: -140px;
+   height: 461px;
+   flex-shrink: 0;
+   border-radius: 261px;
+   border: 1px solid #fff;
+   opacity: 0.4;
+}
+
+.form_heading {
+   color: #fff;
+}
+
+.form_subheading {
+   margin-top: 80px;
+}
+
+.form {
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 60px;
+   gap: 50px;
+}
+
+.form_item {
+   flex: 1 1 45%;
+   display: flex;
+   flex-direction: column;
+}
+
+.form_item-100 {
+   flex: 1 1 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+label {
+   color: #fff;
+   font-family: Montserrat;
+   margin-bottom: 5px;
+}
+
+input, textarea {
+   background-color: transparent;
+   border: 2px solid #9f9f9f;
+   border-radius: 8px;
+   padding: 10px 20px 10px;
+   font-size: 20px;
+   font-family: Montserrat;
+   color: #fff;
+   line-height: 125%; /* 25/20 */
+}
+
+input::placeholder,
+textarea::placeholder {
+   color: #fff;
+}
+
+textarea {
+   flex: 1 1 100%;
+}
+
+button {
+   border: 2px solid #fff;
+   background-color: transparent;
+}
+
+button p {
+   color: #fff;
+   font-size: 14px;
+   margin: 0 !important;
+}
+
+button:hover {
+   background-color: #289113;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+      appearance: none;
+      -moz-appearance: textfield;
+}
+
+p {
+   color: red;
+   font-family: Montserrat;
+   margin: 15px 0 15px 0 !important;
+   font-size: 18px;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+   .form_body {
+      padding: 70px 40px;
+   }
+}
+
+@media only screen and (max-width: 992px) {
+   .form_section {
+      padding: 50px 0;
+   }
+   .form_body {
+      padding: 60px 30px;
+   }
+   .form_subheading {
+      margin-top: 70px;
+   }
+   .form {
+      margin-top: 40px;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .form_item {
+      flex: 1 1 auto;
+   }
+   .form_body {
+      padding: 50px 20px;
+   }
+   .form_subheading {
+      margin-top: 60px;
+   }
+   .form {
+      margin-top: 40px;
+   }
+} 
+
+@media only screen and (max-width: 500px) {
+   .about,
+   .volunteer {
+      padding: 40px 0;
+   }
+   .form_body {
+      padding: 40px 15px;
+   }
+   .form_subheading {
+      margin-top: 50px;
+   }
+}
+
+@media only screen and (max-width: 420px) {
+   .form_item, textarea {
+      width: 95%;
+      align-self: center;
+   }
+}

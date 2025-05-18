@@ -1,0 +1,28 @@
+<div class="cards-donate_card card-donate">
+   <div class="card-donate_image">
+      <img [src]="donationInfo[0]" alt="our help picture">
+   </div>
+   <div class="card-donate_body">
+      <div class="card-donate_goals">
+         <div class="card-donate_goal">
+            Goal<p>{{ donationInfo[1] }}</p>
+         </div>
+         <div class="card-donate_rise">
+            Rise<p>{{ donationInfo[2] }}</p>
+         </div>
+         <div class="card-donate_to-go">
+            To Go<p>{{ donationInfo[5] }}</p>
+         </div>
+      </div>
+      <h5 class="card-donate_heading">{{ donationInfo[3] }}</h5>
+      <p class="card-donate_text text">Lorem Ipsum is simply dummy text of the industry's since the unknown.
+      </p>
+      <div class="card-donate_bottom">
+         <div class="card-donate_volunteer">{{ donationInfo[4] }}</div>
+         <a class="card-donate_donate btn transparent-btn" (click)="handleDonateClick()">
+            <p>Donate Now</p>
+            <img src="../../../assets/angle-right-blue.svg" alt="angle-right-blue">
+         </a>
+      </div>
+   </div>
+</div>

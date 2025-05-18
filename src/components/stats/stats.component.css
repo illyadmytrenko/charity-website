@@ -1,0 +1,46 @@
+.stats {
+}
+
+.stats_body {
+   padding: 80px 0;
+   display: flex;
+   justify-content: space-between;
+}
+
+.stats_item {
+   color: #2A2A2A;
+   text-align: center;
+   font-family: "Playfair Display";
+   font-size: 64px;
+   font-weight: 600;
+   line-height: 125%; /* 80/64 */
+}
+
+.stats_item:not(:last-child) {
+   padding-right: 20px;
+}
+
+.stats_item p {
+   font-size: 32px;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 992px) {
+   .stats_body {
+      padding: 50px 0;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .stats_body {
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   .stats_body {
+      padding: 40px 0;
+   }
+}

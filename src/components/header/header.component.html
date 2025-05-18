@@ -1,0 +1,74 @@
+<header>
+   <div class="logo">
+      <img src="../../assets/mdi_charity.svg" alt="mdi_charity">
+      <h2 class="logo_name">Angels of Compassion</h2>
+   </div>
+   <nav>
+      <ul class="left-one" [ngClass]="{'show': isMenuOpen, 'hide': isMenuOpen==false}">
+         <li>
+            <a id="home" (click)="setActiveLink('home'); goToOtherPage('/home'); closeMenu()">
+               <p [class.active]="activeLinkService.getActiveLinkId() === 'home'">Home</p>
+            </a>
+         </li>
+         <li>
+            <a id="about" (click)="setActiveLink('about'); goToOtherPage('/about'); closeMenu()">
+               <p [class.active]="activeLinkService.getActiveLinkId() === 'about'">About</p>
+            </a>
+         </li>
+         <li>
+            <a id="causes" (click)="setActiveLink('causes'); goToOtherPage('/causes'); closeMenu()">
+               <p [class.active]="activeLinkService.getActiveLinkId() === 'causes'">Causes</p>
+            </a>
+         </li>
+         <li>
+            <a id="contact" (click)="setActiveLink('contact'); goToOtherPage('/contact'); closeMenu()">
+               <p [class.active]="activeLinkService.getActiveLinkId() === 'contact'">Contact Us</p>
+            </a>
+         </li>
+         <li (click)="openModalLogin(); closeMenu()" id="login"><a>Log In</a></li>
+         <li (click)="openModalRegister(); closeMenu()" id="register"><a>Sign Up</a></li>
+         <li class="dropdown-container d-none" id="account">
+            <a class="link">
+               <p>User Account</p>
+               <img src="../../assets/angle-right-gray.svg" alt="angle">
+            </a>
+            <div class="dropdown-content">
+               <ul>
+                  <li class="nav_item">
+                     <a id="donationsHistory"
+                        (click)="setActiveLink('donationsHistory'); goToOtherPage('/donationsHistory'); closeMenu()">
+                        <p class="nav-link text"
+                           [class.activeNav]="activeLinkService.getActiveLinkId() === 'donationsHistory'">My Donations
+                        </p>
+                     </a>
+                  </li>
+                  <li class="nav_item">
+                     <a id="settings" (click)="setActiveLink('settings'); goToOtherPage('/settings'); closeMenu()">
+                        <p class="nav-link text" [class.activeNav]="activeLinkService.getActiveLinkId() === 'settings'">
+                           My Settings</p>
+                     </a>
+                  </li>
+                  <li class="nav_item">
+                     <a (click)="logOut()">
+                        <p class="nav-link text">Log Out</p>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+         <li>
+            <a id="button-copy" (click)="setActiveLink('causes'); goToOtherPage('/causes')">
+               <p>Give Support</p>
+               <img src="../../../assets/angle-right.svg" alt="angle-right">
+            </a>
+         </li>
+      </ul>
+      <div class="icon-one" [ngClass]="{'active-one': isActiveOne, 'fixed': isMenuOpen}" (click)="toggleActiveOne()">
+         <div class="hamburger hamburger-one"></div>
+      </div>
+   </nav>
+   <a id="button" (click)="setActiveLink('causes'); goToOtherPage('/causes')">
+      <p>Give Support</p>
+      <img src="../../../assets/angle-right.svg" alt="angle-right">
+   </a>
+</header>

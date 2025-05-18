@@ -1,0 +1,9 @@
+<div class="pagination">
+   <button *ngIf="currentPage > 1" (click)="selectPage(currentPage - 1)" class="active">
+      <img src="../../../assets/angle-right.svg" alt="angle-right" id="left-angle">
+   </button>
+   <button *ngFor="let page of pages" (click)="selectPage(page)" [disabled]="page === -1"[ngClass]="{'active': currentPage === (page)}">{{ page === -1 ? '...' : page }}</button>
+   <button *ngIf="currentPage < totalPages" (click)="selectPage(currentPage + 1)" class="active">
+      <img src="../../../assets/angle-right.svg" alt="angle-right">
+   </button>
+</div>

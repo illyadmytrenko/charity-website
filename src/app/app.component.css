@@ -1,0 +1,91 @@
+.container {
+   padding: 0 150px;
+}
+
+.btn {
+   padding: 20px 32px;
+   display: inline-flex;
+   border-radius: 12px;
+   align-items: center;
+   font-family: Montserrat;
+   font-weight: 500;
+   line-height: 150%; /* 24/16 */
+   transition: all 0.8s ease 0.2s; 
+   cursor: pointer;
+}
+
+.btn img {
+   position: relative;
+   top: 1px;
+   left: 2px;
+}
+
+.btn:active {
+   position: relative;
+   top: 5px;
+}
+
+.blue-btn {
+   background-color: #3A40D8;
+   color: #fff;
+}
+
+.blue-btn:hover {
+   background-color: #289113;
+}
+
+.transparent-btn {
+   border: 2px #3A40D8 solid;
+   color: #3A40D8;
+}
+
+.transparent-btn img {
+   color: #3A40D8;
+}
+
+.transparent-btn:hover {
+   background-color: #d2720b;
+}
+
+input,
+select {
+   cursor: pointer;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+   .container {
+      padding: 0 100px;
+   }
+}
+
+@media only screen and (max-width: 992px) {
+   .container {
+      padding: 0 70px;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .container {
+      padding: 0 50px;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   .container {
+      padding: 0 40px;
+   }
+}
+
+@media only screen and (max-width: 450px) {
+   .container {
+      padding: 0 30px;
+   }
+}
+
+@media only screen and (max-width: 390px) {
+   .container {
+      padding: 0 20px;
+   }
+}

@@ -1,0 +1,43 @@
+<roadmap [title]="title" [way]="way"></roadmap>
+<section class="donate-now">
+   <div class="container">
+      <div class="donate-now_body">
+         <h3 class="donate-now_heading">Donate Now</h3>
+         <div class="donate-now_main">
+            <div class="donate-now_image">
+               <img [src]="imagePath" alt="our help image">
+            </div>
+            <form class="donate-now_form" (submit)="onSubmit()">
+               <mat-form-field>
+                  <input class="donate-now_sum" placeholder="Amount you want to donate(usd)" name="sum" type="number" min="0" (input)="onInputChange($event)" [(ngModel)]="formData.sum">
+               </mat-form-field>
+               <p id="sum_donate_error"></p>
+               <mat-form-field>
+                  <select name="payment" id="payment" [(ngModel)]="formData.option">
+                     <option value="Choose payment method" selected disabled>Choose payment method</option>
+                     <option value="debit">Debit card</option>
+                     <option value="googlePay">Google Pay</option>
+                     <option value="applePay">Apple Pay</option>
+                     <option value="PayPal">PayPal</option>
+                  </select>
+               </mat-form-field>
+               <p id="select_donate_error"></p>
+               <mat-form-field>
+                  <input placeholder="Your full name" name="fullName"[(ngModel)]="formData.fullName">
+               </mat-form-field>
+               <mat-form-field>
+                  <input placeholder="Your email" name="email" [(ngModel)]="formData.email">
+               </mat-form-field>
+               <p id="email_donate_error"></p>
+               <button mat-raised-button color="primary" type="submit">Donate Now</button>
+            </form>
+         </div>
+         <article class="donate-now_description description-donate">
+            <h4 class="description-donate_heading" [(ngModel)]="desc">{{ desc }}</h4>
+            <p class="description-donate_text text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur provident ea et ad quae, totam delectus accusamus tempore obcaecati corrupti velit quaerat ullam eligendi minus. Corrupti similique amet voluptates velit?
+            Provident, temporibus nesciunt. Facere voluptatum eveniet tempora. Dolores ratione dolorem animi! Aut ratione similique voluptates in fuga illo aspernatur nisi? Id, enim vero inventore unde modi aperiam excepturi ut dolorum.
+            Odio quod dolores unde placeat at, repudiandae optio eos ducimus sed amet blanditiis nostrum veritatis itaque suscipit in cupiditate facilis? Nisi fuga consequuntur est optio molestiae saepe unde totam! Nulla?</p>
+         </article>
+      </div>
+   </div>
+</section>
